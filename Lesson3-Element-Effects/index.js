@@ -1,4 +1,4 @@
-console.log($('div').first());
+/* console.log($('div').first());
 const val = '<h1>Berk Akın</h1>';
 
 $('div').first().on('click',()=>{
@@ -22,4 +22,16 @@ $('#gizle').click(()=>{
 
 $('#goster').click(()=>{
     $('div').show(10000)
+})
+ */
+
+
+$('div').click(function(e){
+    //$(e.target).fadeOut("slow")
+    $(this).fadeOut('slow')
+})
+
+
+$('button').click((e)=>{
+    $('div').fadeIn('slow')
 })
