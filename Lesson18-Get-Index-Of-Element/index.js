@@ -17,4 +17,8 @@ $('#btn2').click(()=>{
     $('.main span').text(html);
 })
 
+//BUTONA TIKLANDIĞINDA İNDEX DEĞERİNİ ALMAK
 
+$('#btn3').click(function(){
+    console.log($(this).index())
+})
