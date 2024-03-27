@@ -1,42 +1,27 @@
-$('input').keydown(function(e){
-    console.log(e.key, e.code);
-    $(this).css('background-color', 'yellow');
-    console.log('keydown '+ $(this).index())
+$('<select>').appendTo('.main');
+for(let i = 0; i<5;i++){
+    const val = `${i+1} Value`;
+    $('<option>').val(val).text(val).appendTo('select');
+}
+
+$('select').change(function(){
+    $('#output').text($(this).val());
 })
 
-$('input').keypress(function(e){
-    console.log(e.key, e.code);
-    $(this).css('color', 'red');
-    console.log('keypress '+ $(this).index())
+$('input[type="text"]').change(function(){
+    $('#output').text($(this).val());    
 })
 
-$('input').keyup(function(e){
-    console.log(e.key, e.code);
-    $(this).css('border', 'none');
-    console.log('keyup '+ $(this).index())
+$(':input').select(function(){
+    $('#output').text($(this).val());
+    console.log($(this).val());
+})  
+
+$('.main').submit(function(e){
+    e.preventDefault();
+    console.log(e)
 })
 
-$('input').focus(function(e){
-    console.log(e.key, e.code);
-    $(this).css('border', '2px solid blue');
-    console.log('focus '+ $(this).index())
+$('#btn1').click(()=>{
+    $('.main').submit();
 })
-
-$('input').blur(function(e){
-    console.log(e.key, e.code);
-    $(this).css('border', '2px solid green');
-    console.log('blur '+ $(this).index())
-})
-
-$('input').focusin(function(e){
-    console.log(e.key, e.code);
-    $(this).css('border', '2px solid orange');
-    console.log('focusin '+ $(this).index())
-})
-
-$('input').focusout(function(e){
-    console.log(e.key, e.code);
-    $(this).css('border', '2px solid red');
-    console.log('focusout '+ $(this).index())
-})
-
