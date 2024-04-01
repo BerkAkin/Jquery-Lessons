@@ -1,0 +1,24 @@
+{
+    "firstName": "Berk",
+    "lastName": "Akın",
+    "isAlive": true,
+    "age": 23,
+    "address": {
+        "streetAddress": "Kocaeli",
+        "city": "Kocaeli",
+        "state": "İzmit",
+        "postalCode": 41780
+    },
+    "phoneNumbers": [
+        {
+            "type":"home",
+            "number": "05555555555"
+        },
+        {
+            "type":"mobile",
+            "number": "11111111111"
+        }
+    ],
+    "children":0,
+    "spouse": "none"
+}
